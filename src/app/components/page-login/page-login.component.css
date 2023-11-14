@@ -1,0 +1,74 @@
+
+form, .recoverGame
+{
+    width: max-content;
+    margin: auto;   
+    margin-top: 20%;  
+}
+
+form > div
+{
+    width: max-content;
+    margin: auto;
+}
+
+p
+{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.2em;
+}
+
+.recoverGame > p 
+{
+    
+    color: white;
+    font-weight: bold;
+}
+
+.recoverGame > div
+{
+    width: max-content;
+    margin: auto;
+}
+
+.recoverGame > div > button
+{
+    margin: 0.2em;
+}
+
+input
+{
+    font-size: 2vw;
+    padding: 0;
+}
+
+button
+{
+    font-size: calc(2vw - 0.3em);
+    position: relative;
+    top: -0.1em;
+}
+
+button:disabled
+{
+    color: rgb(30, 30, 30);
+}
+
+.error
+{
+    color: rgb(216, 43, 43) !important;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 900px)
+{
+    input
+    {
+        font-size: 15px;
+    }
+
+    button
+    {
+        font-size: 14px;
+    }
+}

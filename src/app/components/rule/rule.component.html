@@ -1,0 +1,16 @@
+<div class="content">
+    <div class="rules">
+        <h2>Règle:</h2>
+        <p>Une fois une partie démarré (qui dure 5 tours à partir de la première pioche)</p>
+        <p>Vous avez le choix entre deux boutons, abandonner la partie ou piocher deux cartes dans le tas.</p>
+        <p>- Le bouton “Abandonner” qui fera retour au menu</p>
+        <p>- Le bouton "Piocher"</p>
+        <P>Si le joueur pioche deux cartes, le système les compare: </P>
+        <P>- si les deux cartes ont une valeur et une couleur différentes alors on ajoutera au score du joueur la somme des valeurs des 2 cartes piochés</P>
+        <P>- si les 2 cartes ont la même valeur mais couleur différente alors on soustrait au score du joueur la somme des valeurs des 2 cartes piochés sinon on ajoute au score du joueur 2 fois la somme des valeurs des 2 cartes piochés</P>
+        <P>Une fois fini les 5 tours la partie est fini et le score du joueur est inscrit dans le tableau des records</P>
+
+ 
+    </div>
+    <app-nav-button [class_button]="'button_rule button_dark'" [path]="'retour'">Retour</app-nav-button>
+</div>

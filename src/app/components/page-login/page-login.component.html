@@ -1,0 +1,19 @@
+
+<div class="content">
+    <app-menu></app-menu>
+    <form [formGroup]="playerForm" (ngSubmit)="submitForm()" *ngIf="!gameRecuperation">
+        <div>
+            <input type="text" formControlName="playerName" placeholder="Entrez votre nom"/>
+            <button class="button_dark" type="submit" [disabled]="!playerForm.valid">Valider</button>
+        </div>
+        <p class="error" *ngIf="error">Impossible de se connecter au serveur distant</p>
+    </form>
+    <div *ngIf="gameRecuperation" class="recoverGame">
+        <p>Une partie n'était terminer, voulez vous la reprendre ?</p>
+        <div>
+            <button (click)="recoverGame()" class="button_dark" [disabled]="isClick">Oui</button>
+            <button (click)="newGame()" class="button_dark" [disabled]="isClick">Non</button>
+        </div>
+        <p class="error" *ngIf="error">Impossible de lancer la partie</p>
+    </div>
+</div>

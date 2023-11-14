@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Italic';
+    src: url('assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Arrus';
+    src: url('assets/fonts/tt1654m_.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Arrus-Italic';
+    src: url('assets/fonts/tt1655m_.ttf') format('truetype');
+}
+
+body
+{
+    font-family: 'Montserrat';
+    background-color: black;
+    overflow-x: hidden;
+    user-select: none;
+    margin: 0;
+}
+
+.content {
+    height: 47.619vw;
+    width: 100vw;
+    position: absolute;
+}
+
+.allow-select {
+    user-select: auto;
+}
+
+button
+{
+    font-family: 'Arrus';
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Arrus-Italic';
+    margin: 0;
+}
+
+.button_dark
+{
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    border-width: 0.1em;
+}
+
+.button_game
+{
+    font-size: 2vw;
+    width:  100%;
+    height: 100%;
+}
+
+.button_home
+{
+    width: 90%;
+    height: 6vw;
+    font-size: 2.5vw;
+    margin: 0.75vw 5% ;
+}
+
+.button_score
+{
+    width: max-content;
+    font-size: 1.5vw;
+}
+
+.button_menu,.button_rule
+{
+    font-size: 1.5vw;
+    width: 100%;
+    height: 2vw;
+}
+
+.button_dark:hover
+{
+    background-color: rgba(0, 0, 0, 1);
+}
+
+@media screen and (max-width: 900px)
+{
+    .button_menu,.button_rule
+    {
+        font-size: 15px;
+        height: auto;
+    }
+}

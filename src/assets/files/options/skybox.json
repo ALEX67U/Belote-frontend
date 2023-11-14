@@ -1,0 +1,54 @@
+[
+    {
+        "texture" : "cubemap_1.png",
+        "shape": "cube",
+        "color":
+        {
+            "r":0,
+            "g":0,
+            "b":0.8
+        }
+    },
+    {
+        "texture" : "skybox_11.jpg",
+        "shape": "sphere",
+        "color":
+        {
+            "r":1,
+            "g":1,
+            "b":0.5
+        }
+    },
+    {
+        "texture" : "skybox_7_1.png",
+        "shape": "cube",
+        "color":
+        {
+            "r":1,
+            "g":0,
+            "b":0
+        }
+    },
+    {
+        "texture" : "skybox_12_1.jpg",
+        "shape": "sphere",
+        "color":
+        {
+            "r":1,
+            "g":1,
+            "b":1
+        }
+    },
+    {
+        "texture" : "skybox_3.png",
+        "shape": "cube",
+        "color":
+        {
+            "r":1,
+            "g":1,
+            "b":1
+        }
+    }
+
+    
+]

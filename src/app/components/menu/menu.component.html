@@ -1,0 +1,9 @@
+<menu (mouseover)="toggleHeight(true)" (mouseout)="toggleHeight(false)" (click)="toggleMobilHeight()" #MenuGame>
+    <p #MenuTitle><img src="../../../assets/Menu_icon.png" #MenuLogo />Menu</p>
+    <li><app-nav-button [class_button]="'button_menu button_dark'" [path]="''">Accueil</app-nav-button></li>
+    <li><app-nav-button [class_button]="'button_menu button_dark'" [path]="'score'" >Tableau des scores</app-nav-button></li>
+    <li><app-nav-button [class_button]="'button_menu button_dark'" [path]="'rule'">Règles de jeu</app-nav-button></li>
+    <li><app-nav-button [class_button]="'button_menu button_dark'" [path]="'option'">Options</app-nav-button></li> 
+    <li><app-nav-button [class_button]="'button_menu button_dark'" [path]="'retour'">Retour</app-nav-button></li>
+    <!--<li><app-nav-button [class_button]="'button_menu button_dark'" [path]="'about:blank'">quitter le jeu</app-nav-button></li>-->
+</menu>

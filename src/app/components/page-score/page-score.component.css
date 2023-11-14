@@ -1,0 +1,71 @@
+.score
+{
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: max-content;
+    height: 60%;
+}
+
+.score > div
+{
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.8);
+    overflow: auto;
+}
+
+app-nav-button {
+    margin-left: auto;
+}
+
+
+form 
+{
+    display: flex;
+}
+
+form > div
+{
+    width: max-content;  
+}
+
+form > div > *
+{
+    font-size: 1.5vw;
+}
+
+button:disabled
+{
+    color: rgb(30, 30, 30);
+}
+
+
+table
+{
+    color: white;
+    font-size: 2vw;
+    border-collapse: collapse;
+    
+}
+
+th, td {
+
+    border: 1px solid #ddd; /* Bordure de 1 pixel avec couleur grise */
+    padding: 0.2em; /* Espacement interne des cellules */
+    text-align: left;
+    max-width: 15vw; /* Limite la largeur des cellules à 100 pixels */
+    overflow: hidden;
+    text-overflow:ellipsis; /* Ajoute des points de suspension (...) pour indiquer un texte tronqué */
+    white-space: nowrap; 
+    text-align: center;
+}
+
+th {
+background-color: rgba(50, 50, 50, 0.8); /* Couleur de fond pour les en-têtes */
+}
+
+/* Style pour les lignes impaires (optionnel) */
+tr:nth-child(odd) {
+background-color: rgba(100, 100, 100, 0.8);/* Couleur de fond pour les lignes impaires */
+}

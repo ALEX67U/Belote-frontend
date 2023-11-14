@@ -1,0 +1,104 @@
+.game
+{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    bottom: 15%;
+    transform: translate(-50%, 0);
+    transition: opacity 1s ease;
+}
+
+.front
+{
+    z-index: 9998;
+}
+
+.content
+{
+    transition: background-color 1s ease;
+}
+
+.error
+{
+    color: rgb(216, 43, 43) !important;
+    font-weight: bold;
+}
+
+button,.nav_button
+{
+    display: inline-block;
+    width:  calc(50% - 1em) ;
+    margin: 0.499em;
+    font-size: 2vw;
+}
+
+.game_dark
+{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.game_invisible
+{
+    opacity: 0;
+}
+
+.score
+{
+    text-align: center;
+    position: absolute;
+    font-family: 'Arrus';
+    color: rgb(203, 155, 22);
+    -webkit-text-stroke: 0.1vw rgb(58, 34, 0);
+    font-weight: bold;
+    font-size: 5vw;
+    width: min-content;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: auto;
+}
+
+.yellow
+{
+    color: black;
+    background-color: rgb(190, 190, 0);
+    
+}
+
+.red
+{
+    background-color: rgb(105, 27, 27);
+}
+
+.yellow:hover
+{
+    color: black;
+    background-color: yellow;
+}
+
+.red:hover
+{
+    background-color: brown;
+}
+
+.yellow:disabled
+{
+    color: black;
+    background-color: rgb(45, 45, 0);
+    
+}
+
+.red:disabled
+{
+    color: rgb(128, 128, 128);
+    background-color: rgb(41, 10, 10);
+}
+
+.green
+{
+    background-color:green
+}
+
+.green:hover
+{
+    background-color:rgb(0, 184, 0)
+}

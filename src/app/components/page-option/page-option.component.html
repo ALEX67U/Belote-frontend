@@ -1,0 +1,93 @@
+<div class ="content">
+    <div class = "options">
+        <div class = "background">
+            <h2>Option du fond</h2>
+            <div class="flex_column_2">
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                            <th colspan="3">Couleur de l'arrière plans :</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Rouge :</td>
+                            <td><input type="range" min="0" max="255" thumbLabel="true" value="{{ red*255 }}"(input)="updateColorBackground('red', $event)"/></td>
+                            <td>{{ red | number:'1.3-3' }}</td>
+                        </tr>
+                        <tr>
+                            <td>Vert  :</td>
+                            <td><input type="range" min="0" max="255" thumbLabel="true" value="{{ green*255 }}"(input)="updateColorBackground('green', $event)"></td>
+                            <td>{{ green | number:'1.3-3' }}</td>
+                        </tr>
+                        <tr>
+                            <td>Bleu :</td>
+                            <td><input type="range" min="0" max="255" thumbLabel="true" value="{{ blue*255 }}" (input)="updateColorBackground('blue', $event)"/></td>
+                            <td>{{ blue | number:'1.3-3' }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="1">Skybox theme:</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <input type="radio" name="radioSkybox" (click)="Skybox(0)" [checked]="skybox == 0 "> Désactiver
+                            </tr>
+                            <tr>
+                                <input type="radio" name="radioSkybox" (click)="Skybox(5)" [checked]="skybox == 5"> Sky
+                            </tr>
+                            <tr>
+                                <input type="radio" name="radioSkybox" (click)="Skybox(1)" [checked]="skybox == 1"> Spaaaace
+                            </tr>
+                            <tr>
+                                <input type="radio" name="radioSkybox" (click)="Skybox(2)" [checked]="skybox == 2"> Breaking bad
+                            </tr>
+                            <tr>
+                                <input type="radio" name="radioSkybox" (click)="Skybox(3)" [checked]="skybox == 3"> Floor is lava
+                            </tr>
+                            <tr>
+                                <input type="radio" name="radioSkybox" (click)="Skybox(4)" [checked]="skybox == 4"> Open space
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>Option du jeu</h2>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="1">vitesse des animation :</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <input type="radio" name="radioSpeed" (click)="SpeedGame(1)" [checked]="speedGame == 1"> vitesse de base
+                        </tr>
+                        <tr>
+                            <input type="radio" name="radioSpeed" (click)="SpeedGame(2)" [checked]="speedGame == 2"> vitesse fois 2
+                        </tr>
+                        <tr>
+                            <input type="radio" name="radioSpeed" (click)="SpeedGame(3)" [checked]="speedGame == 3"> vitesse fois 3
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+        </div>
+    </div>
+    <div class ="bottom">
+        <button (click)="cancel()"   class="button_dark">Annuler</button>
+        <button (click)="default()" class="button_dark">Par défaut</button>
+        <button (click)="apply()" class="button_dark">Appliquer</button>
+    </div>
+</div>
+  

@@ -1,0 +1,61 @@
+td
+{
+    white-space: nowrap;
+}
+
+h2
+{
+    width: 100%;
+}
+
+.content > div > button
+{
+    font-weight: bold;
+    width: 33.3%;
+}
+
+.flex_column_2
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flex_column_2 > div
+{
+    min-width: max-content;
+    width: 50%;
+}
+
+.bottom
+{
+    margin: auto;
+    width: 50%;
+}
+
+.options
+{
+    margin: auto;
+    margin-top:5% ;
+    border-radius: 10px;
+    padding: 1vw;
+    height: 68%;
+    width: calc(50% - 2vw);
+    background-color: rgba(20, 20, 20, 0.5);
+    overflow: auto;
+    color: white;
+}
+
+.background
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: min-content;
+}
+
+table
+{
+    width: max-content;
+    padding: 2vw;
+}

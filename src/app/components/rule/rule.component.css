@@ -1,0 +1,25 @@
+.content 
+{
+    height: 47vw;
+    width: 100vw;
+    position: absolute;
+    color:white;
+}
+
+.rules
+{
+    margin: auto;
+    margin-top:5% ;
+    border-radius: 10px;
+    padding: 1vw;
+    height: 68%;
+    width: calc(50% - 2vw);
+    background-color: rgba(20, 20, 20, 0.5);
+    overflow: auto;
+}
+
+app-nav-button{
+    margin: auto;
+    width: 50%;
+    display: block;
+}

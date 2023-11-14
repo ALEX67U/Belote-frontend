@@ -1,0 +1,13 @@
+<app-menu></app-menu>
+<div class="content   {{ end ? 'game_dark' :'' }}" >
+    <div class="score {{ end ? 'game_center' :'' }}">Score: {{score}}</div>
+    <div class="game  {{ end ? 'game_invisible ' : 'front' }}">
+        <button class="button_dark yellow" (click)="drawCard()" [disabled]="isClick">Piocher</button>
+        <button class="button_dark red" (click)="giveUp()" [disabled]="isClick">Abandonner</button>
+    </div>
+    <div class="game  {{ end ? 'front' : 'game_invisible ' }}">
+        <button class="button_dark green" (click)="newGame()" >Rejouer</button>
+        <app-nav-button class="nav_button" [path]="''" [class_button]="'button_dark button_game'" > Quitter</app-nav-button>
+        <p class="error" *ngIf="error">Impossible de lancer la partie</p>
+    </div>
+</div>

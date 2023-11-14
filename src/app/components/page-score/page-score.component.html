@@ -1,0 +1,32 @@
+<div class="content">
+    <div class="score">
+        <div >
+            <table>
+                <thead>
+                <tr>
+                    <th>Rang</th>
+                    <th>Nom</th>
+                    <th>Meilleur Score</th>
+                    <th>Parties Jouer</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let item of listeMax; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.score }}</td>
+                    <td>{{ item.gamePlayed }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <form [formGroup]="playerForm" (ngSubmit)="submitForm()">
+            <div>
+                <input type="text" formControlName="playerName" placeholder="Rechercher un nom"/>
+                <button class="button_dark" type="submit" [disabled]="isClick">Rechercher</button>
+            </div>
+            <app-nav-button [class_button]="'button_score button_dark'" [path]="'retour'">Retour</app-nav-button>
+        </form>
+        
+    </div>
+</div>

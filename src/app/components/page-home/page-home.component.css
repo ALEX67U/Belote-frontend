@@ -1,0 +1,21 @@
+div 
+{
+    margin: auto;
+    margin-top: 2vw;
+    width: 50%;
+}
+
+h1
+{
+    font-size: 9vw;
+    width: max-content;
+    white-space: nowrap;
+    margin: auto;
+    color: whitesmoke;
+    -webkit-text-stroke: 0.1vw rgb(0, 49, 58);
+}
+
+*
+{
+    display: block;
+}
