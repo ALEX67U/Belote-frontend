@@ -21,9 +21,7 @@ export class PageOptionComponent{
   {
     this.optionService.getDataLoadedObservable().subscribe(loaded => 
     {
-      this.updateColorBackground();
-      this.speedGame = this.optionService.getSpeedGame();
-      this.skybox =this.optionService.getSkybox()
+      this.updateInput()
     });
   }
 
@@ -49,16 +47,38 @@ export class PageOptionComponent{
     }
     else
     {
-      const color = this.optionService.getColorBackground();
-      this.red = color.r
-      this.green = color.g
-      this.blue = color.b
+      this.inputColor();
     }
+  }
+
+  updateInput()
+  {
+    this.inputColor();
+    this.inputSkyBox();
+    this.inputSpeedGame();
+  }
+
+  inputSkyBox()
+  {
+    this.skybox =this.optionService.getSkybox()
+  }
+
+  inputSpeedGame()
+  {
+    this.speedGame = this.optionService.getSpeedGame();
+  }
+
+  inputColor()
+  {
+    const color = this.optionService.getColorBackground();
+    this.red = color.r
+    this.green = color.g
+    this.blue = color.b
   }
 
   Skybox(index : number)
   {
-    this.optionService.setSkybox(this.skybox = index )
+    this.optionService.setSkybox(this.skybox = index );
   }
 
   SpeedGame(speed: number) 
@@ -69,13 +89,13 @@ export class PageOptionComponent{
   cancel() 
   {
     this.optionService.tryLoadOption();
-    this.updateColorBackground();
+    this.updateInput();
   }
   
   default() 
   {
     this.optionService.defaultOption();
-    this.updateColorBackground();
+    this.updateInput();
   }
 
   apply() 

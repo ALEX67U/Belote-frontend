@@ -31,7 +31,7 @@ export class ParserSkybox extends ParserOption
 
     override default(data: any): void 
     {
-        this.value = data.speedGame
+        this.value = data.skybox
     }
 
     override tryLoad(data: any): void 
