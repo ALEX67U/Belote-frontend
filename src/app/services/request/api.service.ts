@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,7 +9,23 @@ export class ApiService {
   
   private baseUrl = 'http://localhost:8080';
 
-  constructor(private http: HttpClient) { 
+  private headers: HttpHeaders = new HttpHeaders;
+
+  initToken(token : string)
+  {
+    this.headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
+  }
+
+  constructor(private http: HttpClient) 
+  {
+    const token = localStorage.getItem('token')
+    if(token)
+      this.initToken(token)
+
+    console.log(this.headers)
   }
 
   startGame(name: string): Observable<string> {
@@ -18,11 +34,11 @@ export class ApiService {
   }
 
   getCard(gameId: string): Observable<Response> {
-    return this.http.get<Response>(this.baseUrl + '/game/get/' + gameId);
+    return this.http.get<Response>(this.baseUrl + '/game/action/get/' + gameId, { headers: this.headers});
   }
   
   drawCard(gameId: string): Observable<Response> {
-    return this.http.get<Response>(this.baseUrl + '/game/draw/' + gameId);
+    return this.http.get<Response>(this.baseUrl + '/game/action/draw/' + gameId, { headers: this.headers});
   }
 
   scores(): Observable<Response> {
@@ -35,7 +51,7 @@ export class ApiService {
 
 
   quit(gameId: string): Observable<Response> {
-    return this.http.delete<Response>(this.baseUrl + '/game/quit/' + gameId);
+    return this.http.delete<Response>(this.baseUrl + '/game/action/quit/' + gameId, { headers: this.headers});
   }
 
   getDeck(): Observable<Response> {

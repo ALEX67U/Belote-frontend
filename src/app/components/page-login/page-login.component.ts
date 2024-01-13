@@ -72,9 +72,12 @@ export class PageLoginComponent implements OnInit{
     if (this.playerName && !this.isClick) 
     {
       this.isClick = true;
-      this.apiService.startGame(this.playerName).subscribe(data => 
+      this.apiService.startGame(this.playerName).subscribe((data: any )=> 
       {
-        localStorage.setItem('gameUuid', data );
+        console.log(data);
+        localStorage.setItem('gameUuid', data.game_id );
+        localStorage.setItem('token', data.token );
+        this.apiService.initToken(data.token)
         localStorage.setItem('userGame', this.playerName as string);
         this.cardsService.cleanHand();
         this.router.navigate(['/game']);
