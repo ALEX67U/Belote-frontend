@@ -74,7 +74,6 @@ export class PageLoginComponent implements OnInit{
       this.isClick = true;
       this.apiService.startGame(this.playerName).subscribe((data: any )=> 
       {
-        console.log(data);
         localStorage.setItem('gameUuid', data.game_id );
         localStorage.setItem('token', data.token );
         this.apiService.initToken(data.token)

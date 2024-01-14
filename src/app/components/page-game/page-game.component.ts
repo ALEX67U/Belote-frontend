@@ -78,9 +78,10 @@ export class PageGameComponent implements OnInit{
     if (playerName && this.isClick) 
     {
       this.isClick = false;
-      this.apiService.startGame(playerName).subscribe(data => 
+      this.apiService.startGame(playerName).subscribe((data: any )=> 
       {
-        localStorage.setItem('gameUuid', data );
+        localStorage.setItem('gameUuid', data.game_id );
+        localStorage.setItem('token', data.token );
         this.cardsService.cleanHand();
         this.router.navigate(['/game']);
         this.end = false;

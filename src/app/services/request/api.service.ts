@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -24,8 +24,6 @@ export class ApiService {
     const token = localStorage.getItem('token')
     if(token)
       this.initToken(token)
-
-    console.log(this.headers)
   }
 
   startGame(name: string): Observable<string> {
@@ -34,7 +32,7 @@ export class ApiService {
   }
 
   getCard(gameId: string): Observable<Response> {
-    return this.http.get<Response>(this.baseUrl + '/game/action/get/' + gameId, { headers: this.headers});
+    return this.http.get<Response>(this.baseUrl + '/game/action/get/' + gameId, { headers: this.headers });
   }
   
   drawCard(gameId: string): Observable<Response> {
